@@ -40,5 +40,4 @@ public class Receta
 		this.preparacion = preparacion;
 	}
 	
-	
 }
