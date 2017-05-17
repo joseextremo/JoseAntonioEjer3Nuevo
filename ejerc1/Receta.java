@@ -1,18 +1,28 @@
 package ejerc1;
 
+import java.util.ArrayList;
+
 public class Receta 
 {
 	private String nombre;
 	private String ingredientes;
-	private String preparacion;
+	private ArrayList <String> preparacion= new ArrayList();
 	
 	public Receta(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public Receta(String nombre, String ingredientes, String preparacion) {
+	public Receta(String nombre, String ingredientes, ArrayList<String> preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
+		this.preparacion = preparacion;
+	}
+
+	public ArrayList<String> getPreparacion() {
+		return preparacion;
+	}
+
+	public void setPreparacion(ArrayList<String> preparacion) {
 		this.preparacion = preparacion;
 	}
 
@@ -32,13 +42,4 @@ public class Receta
 		this.ingredientes = ingredientes;
 	}
 
-	public String getPreparacion() {
-		return preparacion;
-	}
-
-	public void setPreparacion(String preparacion) {
-		this.preparacion = preparacion;
-	}
-	
-	
 }
