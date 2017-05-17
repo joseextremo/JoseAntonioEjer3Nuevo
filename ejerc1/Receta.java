@@ -5,17 +5,25 @@ import java.util.ArrayList;
 public class Receta 
 {
 	private String nombre;
-	private String ingredientes;
 	private ArrayList <String> preparacion= new ArrayList();
+	private ArrayList<String> ingredientes = new ArrayList();
 	
 	public Receta(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public Receta(String nombre, String ingredientes, ArrayList<String> preparacion) {
+	public Receta(String nombre, ArrayList<String> ingredientes, ArrayList<String> preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
+	}
+	
+	public ArrayList<String> getIngredientes() {
+		return ingredientes;
+	}
+
+	public void setIngredientes(ArrayList<String> ingredientes) {
+		this.ingredientes = ingredientes;
 	}
 
 	public ArrayList<String> getPreparacion() {
@@ -32,14 +40,6 @@ public class Receta
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getIngredientes() {
-		return ingredientes;
-	}
-
-	public void setIngredientes(String ingredientes) {
-		this.ingredientes = ingredientes;
 	}
 
 }
