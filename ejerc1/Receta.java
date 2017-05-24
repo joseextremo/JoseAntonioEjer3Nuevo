@@ -6,23 +6,23 @@ public class Receta
 {
 	private String nombre;
 	private ArrayList <String> preparacion= new ArrayList();
-	private ArrayList<String> ingredientes = new ArrayList();
+	private ArrayList<Ingredientes> ingredientes = new ArrayList();
 	
 	public Receta(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public Receta(String nombre, ArrayList<String> ingredientes, ArrayList<String> preparacion) {
+	public Receta(String nombre, ArrayList<Ingredientes> ingredientes, ArrayList<String> preparacion) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
 	}
 	
-	public ArrayList<String> getIngredientes() {
+	public ArrayList<Ingredientes> getIngredientes() {
 		return ingredientes;
 	}
 
-	public void setIngredientes(ArrayList<String> ingredientes) {
+	public void setIngredientes(ArrayList<Ingredientes> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
