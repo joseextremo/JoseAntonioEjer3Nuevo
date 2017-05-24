@@ -39,5 +39,12 @@ public class Ingredientes
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+	@Override
+	public String toString() {
+		return "Ingredientes [cantidad=" + 3 + ", unidad=" + "kg" + ", nombre=" + "tomates" + "]";
+	}
+	
+	
 	
 }
