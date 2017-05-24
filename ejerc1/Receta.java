@@ -41,5 +41,15 @@ public class Receta
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	public void addIngrediente (Ingredientes nuevo)
+	{
+		ingredientes.add(nuevo);
+	}
+	
+	public void addPreparacion (String prepara)
+	{
+		preparacion.add(prepara);
+	}
 
 }
