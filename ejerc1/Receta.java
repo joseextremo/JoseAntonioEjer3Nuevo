@@ -52,4 +52,34 @@ public class Receta
 		preparacion.add(prepara);
 	}
 
+	@Override
+	public String toString() {
+		return ".Receta: " + nombre.toUpperCase() + "\n .Preparacion:\n" + recorrerPreparacion() + ",\n Ingredientes:\n" + devolverIngredientes();
+	}
+	
+	public String recorrerPreparacion ()
+	{
+		String devolver=new String();
+		
+		for (int i=0;i<preparacion.size();i++)
+		{
+			devolver=devolver+"   -Paso "+(i+1)+preparacion.get(i)+"\n";
+		}
+		
+		return devolver;
+	}
+	
+	public String devolverIngredientes()
+	{
+		String devolver=new String();
+		
+		for (int i=0;i<ingredientes.size();i++)
+		{
+			devolver=devolver+"   -"+ingredientes.get(i).getCantidad()+" "+ingredientes.get(i).getUnidad()+" de "+ingredientes.get(i).getNombre()+"\n";
+		}
+		
+		return devolver;
+	}
+
+	
 }
