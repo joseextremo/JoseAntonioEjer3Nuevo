@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Receta 
 {
+	private int personas=4;
+	String autor;
 	private String nombre;
 	private ArrayList <String> preparacion= new ArrayList();
 	private ArrayList<Ingredientes> ingredientes = new ArrayList();
@@ -12,10 +14,12 @@ public class Receta
 		this.nombre = nombre;
 	}
 
-	public Receta(String nombre, ArrayList<Ingredientes> ingredientes, ArrayList<String> preparacion) {
+	public Receta(String nombre, ArrayList<Ingredientes> ingredientes, ArrayList<String> preparacion, int personas, String autor) {
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
+		this.personas = personas;
+		this.autor = autor;
 	}
 	
 	public ArrayList<Ingredientes> getIngredientes() {
@@ -50,6 +54,22 @@ public class Receta
 	public void addPreparacion (String prepara)
 	{
 		preparacion.add(prepara);
+	}
+
+	public int getPersonas() {
+		return personas;
+	}
+
+	public void setPersonas(int personas) {
+		this.personas = personas;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	@Override
