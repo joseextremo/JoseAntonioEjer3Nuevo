@@ -100,6 +100,17 @@ public class Receta
 		
 		return devolver;
 	}
+	
+	public Receta recetaPara (int personas)
+	{
+		float ingrePersona = ingredientes.get(0).getCantidad()/personas;
+		
+		float ingreTotal = ingrePersona*personas;
+		
+		ingredientes.get(0).setCantidad(ingreTotal);
+		
+		return this;
+	}
 
 	
 }
